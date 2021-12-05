@@ -100,15 +100,12 @@ dc.loadMenuItems = function (categoryShort) {
 
 
 function buildAndShowCategoriesHTML (categories) {
-  // Load title snippet of categories page
   $ajaxUtils.sendGetRequest(
     categoriesTitleHtml,
     function (categoriesTitleHtml) {
-      // Retrieve single category snippet
       $ajaxUtils.sendGetRequest(
         categoryHtml,
         function (categoryHtml) {
-          // Switch CSS class active to menu button
           switchMenuToActive();
 
           var categoriesViewHtml =
